@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta USABIT</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="roleta.css">
+</head>
+<body>
+
+
+<div class="roleta" id="roleta"></div>
+<button id= "girar" onclick="girar()">SORTEAR</button>
+
+<div class="ponteiro"></div>
+
+<div class="legenda">
+  <div class="caixa">Carregador Portátil</div>
+  <div class="caixa">Fone Bluetooth Xiaomi</div>
+  <div class="caixa">Carregador por indução</div>
+  <div class="caixa">Tomada Wi-fi</div>
+  <div class="caixa">Jogo WAR</div>
+  <div class="caixa">Xiaomi Roteador</div>
+  <div class="caixa">Combo Teclado e Mouse</div>
+  <div class="caixa">Assinatura Streaming</div>
+  <div class="caixa">Folga</div>
+  <div class="caixa">Trabalhar domingo</div>
+</div>
+
+<script>    
+    function girar() {
+        var angulo = Math.floor(Math.random() * 360) + 360;
+        document.documentElement.style.setProperty('--posicao', angulo + 'deg');
+        document.getElementById("roleta").classList.add('giro');
+        document.getElementById("girar").remove();
+    };
+</script>
+</body>
+</html>
